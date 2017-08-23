@@ -25,9 +25,11 @@ scipy
 Certain features:
 cython - needed for recompilation of accelerated functions.
 
-Includes:
+Includes: [Please see repositories for appropriate lisence]
 gmshtranslator - Original author: jaabel (GitHub). Updated, corrected & expanded by HJA Bird.
+			-> https://github.com/jaabell/gmshtranslator
 evtk - Original author: paulo.herrera.eirl@gmail.com. Updated to python 3.3 compatible & expanded by HJA Bird
+			-> https://bitbucket.org/pauloh/pyevtk
 
 Theoretically Python 2.7 / Python 3.3 compliant. Tested only on python 3.3.
 Written to PEP8 std except for run script.
