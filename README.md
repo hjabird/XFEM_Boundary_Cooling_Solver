@@ -1,24 +1,13 @@
-"""
-@author: Hugh Bird
-@copyright Copyright 2017, Hugh Bird
-@lisence: MIT
-@status: alpha
-"""
-
-
- .M""'bgd `7MM""'Mq.         `YMM'   `MP' `7MM"'"YMM `7MM"'"YMM  `7MMM.     ,MMF'
-,MI    "Y   MM   `MM. __,      VMb.  ,P     MM    `7   MM    `7    MMMb    dPMM
-`MMb.       MM   ,M9 `7MM       `MM.M'      MM   d     MM   d      M YM   ,M MM
-  `YMMNq.   MMmmdM9    MM         MMb       MM""MM     MMmmMM      M  Mb  M' MM
-.     `MM   MM         MM mmmmm ,M'`Mb.     MM   Y     MM   Y  ,   M  YM.P'  MM
-Mb     dM   MM         MM      ,P   `MM.    MM         MM     ,M   M  `YM'   MM
-P"Ybmmd"  .JMML.     .JMML.  .MM:.  .:MMa..JMML.     .JMMmmmmMMM .JML. `'  .JMML.
-
+# XFEM_BOUNDARY_COOLING_SOLVER
 
 Simulation of transient heat transfer using the XFEM with a SP1 radiative heat
-transfer aproximation.
+transfer aproximation. Input is via GMSH .msh file and python script. Output
+is via .vtk files for visualisation in paraview. 
 
+This was part of an MEng dissertation project and is no longer under 
+active development.
 
+## Dependencies
 Requirements:
 numpy 
 scipy 
@@ -31,6 +20,7 @@ gmshtranslator - Original author: jaabel (GitHub). Updated, corrected & expanded
 evtk - Original author: paulo.herrera.eirl@gmail.com. Updated to python 3.3 compatible & expanded by HJA Bird
 			-> https://bitbucket.org/pauloh/pyevtk
 
+## Notes
 Theoretically Python 2.7 / Python 3.3 compliant. Tested only on python 3.3.
 Written to PEP8 std except for run script.
 It is suggested that the Anaconda python distribution is used.
@@ -47,7 +37,7 @@ Often logging to a file is useful:
 python ht3_solver_run_script.py > ./ROut/my_log_file.log
 
 
-Known issues:
+## Issues
 - Quad9 elements are incorrectly formulated.
 - Projecting meshes onto each other:
 	- Occasionally completely misplaces nodes -> BAD
@@ -61,7 +51,7 @@ Known issues:
 	- Supposedly, Dill package allows this.
 	- Serialisation of function objects also precludes use of the multiprocessing module.
 
-Suggestions for alterations:
+## Further work
 - Integration system:
 	- Currently based on min number of points in each direction.
 	- Support for including integral transforms would be nice
